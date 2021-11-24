@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css">
+  
+  <!-- Styling -->
+  <style>
+    #submit:hover{
+        background: #0492C2;
+    }
+  </style>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark bg-primary mb-3">
+            <div class="container">
+                <a href="#" class="navbar-brand">Weather View</a>
+            </div>
+        </nav>
+
+        <!-- Seach Bar -->
+        <div class="container searchContainer">
+            <div class="search card card-body">
+                <h1>Get The Weather For a Country or City</h1>
+                <p class="lead">Enter Location</p>
+                <input type="text" id="searchUser" class="form-control" placeholder="Location">
+            </div>
+            <br>
+            <div id="profile"></div>
+        </div>
+
+        <!-- Button -->
+        <div class="container text-center mt-2">
+            <button class="btn btn-primary" id="submit">Search</button>
+        </div>
+        
+        <!-- Section to be filled with weather content -->
+        <div id="content">
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-5 p-3 text-center bg-light">
+             Mohamad Faruk 2021 &copy;
+        </footer>
+  </body>
+  <!-- JavaScript Files -->
+  <script src="fetch.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</html>
