@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css">
-  
-  <!-- Styling -->
-  <style>
-    #submit:hover{
-        background: #0492C2;
-    }
-  </style>
-  
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css"
+    />
   </head>
   <body>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-dark bg-primary mb-3">
-            <div class="container">
-                <a href="#" class="navbar-brand">Weather View</a>
-            </div>
-        </nav>
+    <!-- Header -->
+    <nav class="navbar navbar-dark bg-primary mb-3">
+      <div class="container">
+        <a href="#" class="navbar-brand">Weather View</a>
+      </div>
+    </nav>
 
-        <!-- Seach Bar -->
-        <div class="container searchContainer">
-            <div class="search card card-body">
-                <h1>Get The Weather For a Country or City</h1>
-                <p class="lead">Enter Location</p>
-                <input type="text" id="searchUser" class="form-control" placeholder="Location">
-            </div>
-            <br>
-            <div id="profile"></div>
+    <!-- Search Box -->
+    <div class="container searchContainer input">
+      <div class="search card card-body">
+        <h2>Find Out A City's Current Weather</h2>
+        <br />
+
+        <input type="text" placeholder="Enter a city " class="search-bar" />
+        <div class="error"></div>
+        <br />
+        <div class="mt-2">
+          <button class="btn btn-primary submit" id="submit">Check</button>
         </div>
+      </div>
+    </div>
 
-        <!-- Button -->
-        <div class="container text-center mt-2">
-            <button class="btn btn-primary" id="submit">Search</button>
+    <!-- Weather Display -->
+    <div class="card mx-auto mt-5" style="width: 18rem">
+      <div class="container card-body justify-content-center">
+        <div class="card">
+          <h3 class="name card-title" id="name"></h3>
+          <h4 class="temperature"></h4>
+          <br />
+          <h5 class="description card-text"></h5>
+          <img class="icon" />
         </div>
-        
-        <!-- Section to be filled with weather content -->
-        <div id="content">
+      </div>
+    </div>
 
-        </div>
-
-        <!-- Footer -->
-        <footer class="mt-5 p-3 text-center bg-light">
-             Mohamad Faruk 2021 &copy;
-        </footer>
+    <!-- Footer -->
+    <footer class="mt-5 p-3 text-center bg-light">
+      Weather View 2021 &copy;
+    </footer>
   </body>
-  <!-- JavaScript Files -->
-  <script src="fetch.js"></script>
-  <script src="ui.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js" charset="utf-8"></script>
 </html>
